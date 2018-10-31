@@ -22,7 +22,7 @@ public class MySQLServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest request,HttpServletResponse response)throws
 	ServletException,IOException{
 		request.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html;UTF-8");
+		response.setContentType("text/html;charset=UTF-8");
 
 		PrintWriter out=response.getWriter();
 
@@ -51,7 +51,7 @@ public class MySQLServlet extends HttpServlet{
 				String userPassword=rs.getString("password");
 				out.println("<p>");
 				out.println("ユーザーID:"+userId+",ユーザー名:"+userName+",パスワード:"+userPassword);
-				out.println("<p>");
+				out.println("</p>");
 			}
 
 			rs.close();
@@ -61,7 +61,7 @@ public class MySQLServlet extends HttpServlet{
 		}catch(SQLException e){
 			out.println("SQLException:"+e.getMessage());
 		}catch(Exception e){
-			out.println("EXception:"+e.getMessage());
+			out.println("Exception:"+e.getMessage());
 		}finally{
 			try{if(conn !=null){
 				conn.close();
@@ -72,7 +72,7 @@ public class MySQLServlet extends HttpServlet{
 	}
 
 		out.println("</body>");
-		out.println("<html>");
+		out.println("</html>");
 }
 }
 

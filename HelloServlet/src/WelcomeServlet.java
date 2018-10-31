@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/welcomeServlet")
+@WebServlet("/WelcomeServlet")
 public class WelcomeServlet extends HttpServlet{
 
 public WelcomeServlet(){
@@ -25,6 +25,6 @@ ServletException,IOException{
 	System.out.println(username);
 
 	PrintWriter out=response.getWriter();
-	out.println("<html><head></head><body><br>"+username+"さん、ようこそ！</body></html>");
+	out.println("<html><head></head><body><br>"+username+"さん、ようこそ!</body></html>");
 }
 }
