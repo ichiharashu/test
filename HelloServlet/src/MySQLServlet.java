@@ -33,7 +33,7 @@ public class MySQLServlet extends HttpServlet{
 		out.println("<body>");
 
 		Connection conn=null;
-		String url="jdbc:mysql://localhost/sampledb";
+		String url="jdbc:mysql://localhost/testdb";
 		String user="root";
 		String password="mysql";
 
@@ -42,7 +42,7 @@ public class MySQLServlet extends HttpServlet{
 			conn=DriverManager.getConnection(url,user,password);
 
 			Statement stmt=conn.createStatement();
-			String sql="SELECT*FROM sample_table";
+			String sql="SELECT*FROM test_table";
 			ResultSet rs=stmt.executeQuery(sql);
 
 			while(rs.next()){

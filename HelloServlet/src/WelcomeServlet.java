@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/WelcomeServlet")
 public class WelcomeServlet extends HttpServlet{
-
 public WelcomeServlet(){
 	super();
 }
